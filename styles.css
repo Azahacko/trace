@@ -1,0 +1,72 @@
+body {
+    display: flex;
+    flex-direction: column; /* Permet de disposer les éléments en colonne */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Assure que le corps prend au moins la hauteur de la fenêtre */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    position: relative;
+    overflow: hidden; /* Pour éviter le débordement */
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('drapeau1.jpg'); /* Remplacez par le nom de votre fichier */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3; /* Ajustez l'opacité ici (0.0 à 1.0) */
+    z-index: 1; /* Assurez-vous que l'image est derrière le contenu */
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Fond blanc semi-transparent */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative; /* Pour que le contenu soit au-dessus de l'image de fond */
+    z-index: 2; /* Assurez-vous que le contenu est au-dessus de l'image */
+    margin-bottom: auto; /* Permet de pousser le footer vers le bas */
+}
+
+.info {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px; /* Ajoute un espace en bas du texte d'information */
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+footer {
+    text-align: center;
+    margin-top: auto; /* Permet de pousser le footer vers le bas */
+    width: 100%; /* Prend toute la largeur */
+}
+
+.copyright {
+    font-size: 14px;
+    color: #333;
+    padding: 10px 0; /* Ajoute un peu d'espace autour du texte de copyright */
+}
